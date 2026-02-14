@@ -22,7 +22,7 @@
  */
 
 
-public class MyFirstApp 
+public class My_First_Java_App 
 {
 	
 	public static void main(String args[]) {
@@ -344,7 +344,7 @@ for (int i = 0; i <3; i++){
 	
 	 members[1].setIsBoy(true);
 	 members[2].setIsBoy(true);
-	println;
+	System.out.println();
 	x = 0;
 	while (x<3){
 		if (x == 0){
