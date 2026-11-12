@@ -1,0 +1,6 @@
+[
+  {"id": "procedure", "name": "Procedure", "statuses": ["In Work", "Under Review", "Released"]},
+  {"id": "specification", "name": "Specification", "statuses": ["In Work", "Under Review", "Released"]},
+  {"id": "plan", "name": "Plan", "statuses": ["In Work", "Under Review", "Released"]},
+  {"id": "report", "name": "Report", "statuses": ["In Work", "Under Review", "Released"]}
+]

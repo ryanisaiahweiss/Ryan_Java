@@ -1,0 +1,5 @@
+{
+  "title": "Engineering Requirements",
+  "description": "Configurable requirement modules with live traceability and cross-filtering.",
+  "collections": ["modules", "requirements", "links", "authors"]
+}

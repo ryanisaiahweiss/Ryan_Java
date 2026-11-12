@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Modulyt · Engineering Requirements</title>
+  <link rel="stylesheet" href="/static/modulyt.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/">Modulyt</a>
+    <span class="title">Engineering Requirements</span>
+    <span class="spacer"></span>
+    <span id="live" class="live" title="Live connection to the server">live</span>
+    <label class="inline">Author
+      <select id="author"></select>
+    </label>
+    <button id="import" title="Import requirements from an Excel workbook (one sheet per module)">Import Excel</button>
+    <button id="add-author" title="Add an author">+ Author</button>
+    <button id="manage-modules" title="Add, rename, reorder or delete requirement modules (levels)">Modules…</button>
+    <a class="btn" href="help.html" target="_blank" rel="noopener">Help &amp; FAQ</a>
+  </header>
+
+  <div class="modebar">
+    <button id="add-column" title="Show another module as an extra column (up to 6)">+ Column</button>
+    <span id="mode"></span>
+    <span class="hint">Click to select and highlight traces · Double-click to edit · Drag onto a requirement in another column to trace · Ctrl+click toggles a trace · Esc clears</span>
+  </div>
+
+  <main class="columns" id="columns"></main>
+
+  <script src="/static/modulyt.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

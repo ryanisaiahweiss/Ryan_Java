@@ -1,0 +1,8 @@
+[
+  {"id": "AC",   "name": "Aircraft Requirements",     "prefix": "AC",   "level": 0, "description": "Top-level aircraft capabilities"},
+  {"id": "SYS",  "name": "System Requirements",       "prefix": "SYS",  "level": 1, "description": ""},
+  {"id": "SUB",  "name": "Subsystem Requirements",    "prefix": "SUB",  "level": 2, "description": ""},
+  {"id": "COMP", "name": "Component Requirements",    "prefix": "COMP", "level": 3, "description": ""},
+  {"id": "SW",   "name": "Software Requirements",     "prefix": "SW",   "level": 4, "description": ""},
+  {"id": "VER",  "name": "Verification Requirements", "prefix": "VER",  "level": 5, "description": ""}
+]

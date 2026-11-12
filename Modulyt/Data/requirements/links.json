@@ -1,0 +1,7 @@
+[
+  {"id": "SYS-0001>SW-0001", "parent": "SYS-0001", "child": "SW-0001"},
+  {"id": "SYS-0001>SW-0002", "parent": "SYS-0001", "child": "SW-0002"},
+  {"id": "SYS-0002>SW-0003", "parent": "SYS-0002", "child": "SW-0003"},
+  {"id": "SYS-0002>SW-0004", "parent": "SYS-0002", "child": "SW-0004"},
+  {"id": "SYS-0003>SW-0005", "parent": "SYS-0003", "child": "SW-0005"}
+]

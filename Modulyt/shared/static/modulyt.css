@@ -1,0 +1,104 @@
+/* Modulyt shared theme: dark-mode native. Reused by every dashboard. */
+:root {
+  color-scheme: dark;
+  --bg: #0f1216;
+  --panel: #171b21;
+  --panel-2: #1e242c;
+  --border: #2a313b;
+  --text: #e3e8ee;
+  --muted: #8b96a5;
+  --accent: #4da3ff;
+  --accent-soft: rgba(77, 163, 255, 0.16);
+  --link: #f5b942;
+  --link-soft: rgba(245, 185, 66, 0.14);
+  --danger: #ff6b6b;
+  --ok: #4cc38a;
+  --radius: 6px;
+  --font: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+  --mono: ui-monospace, "Cascadia Mono", Consolas, monospace;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body { background: var(--bg); color: var(--text); font: 14px/1.45 var(--font); display: flex; flex-direction: column; }
+a { color: var(--accent); }
+
+.topbar { display: flex; align-items: center; gap: 12px; padding: 8px 16px; background: var(--panel); border-bottom: 1px solid var(--border); }
+.topbar .brand { font-weight: 700; letter-spacing: .04em; color: var(--accent); text-decoration: none; }
+.topbar .title { color: var(--muted); }
+.spacer { flex: 1; }
+
+input, select, textarea, button { font: inherit; color: var(--text); background: var(--panel-2); border: 1px solid var(--border); border-radius: var(--radius); padding: 6px 10px; }
+input:focus, select:focus, textarea:focus, button:focus-visible { outline: 2px solid var(--accent); outline-offset: -1px; }
+textarea { width: 100%; resize: vertical; min-height: 90px; }
+button { cursor: pointer; }
+button:hover { border-color: var(--accent); }
+button.primary { background: var(--accent); border-color: var(--accent); color: #06121f; font-weight: 600; }
+button.danger:hover { border-color: var(--danger); color: var(--danger); }
+button.icon { padding: 2px 7px; background: transparent; border-color: transparent; color: var(--muted); }
+button.icon:hover { color: var(--text); border-color: var(--border); }
+
+.badge { font-size: 11px; padding: 1px 7px; border-radius: 10px; background: var(--panel-2); border: 1px solid var(--border); color: var(--muted); }
+
+/* home page */
+.home { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; padding: 24px; }
+.card { display: block; padding: 18px; background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); text-decoration: none; color: var(--text); }
+.card:hover { border-color: var(--accent); }
+.card h2 { margin: 0 0 6px; font-size: 16px; }
+.card p { margin: 0; color: var(--muted); }
+
+/* modal form */
+dialog { background: var(--panel); color: var(--text); border: 1px solid var(--border); border-radius: 10px; padding: 0; width: min(520px, 92vw); }
+dialog::backdrop { background: rgba(0, 0, 0, .6); }
+dialog form { padding: 18px; display: flex; flex-direction: column; gap: 12px; }
+dialog h3 { margin: 0; }
+dialog label { display: flex; flex-direction: column; gap: 4px; color: var(--muted); font-size: 12px; }
+dialog label input, dialog label select { color: var(--text); font-size: 14px; }
+dialog .actions { display: flex; justify-content: flex-end; gap: 8px; }
+dialog .error { color: var(--danger); min-height: 1em; }
+
+.toast { position: fixed; bottom: 18px; right: 18px; background: var(--panel-2); border: 1px solid var(--border); border-left: 3px solid var(--danger); padding: 10px 14px; border-radius: var(--radius); max-width: 360px; z-index: 100; }
+.toast.ok { border-left-color: var(--ok); }
+
+.live { font-size: 12px; color: var(--muted); display: inline-flex; align-items: center; gap: 6px; }
+.live::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--danger); }
+.live.on::before { background: var(--ok); }
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+
+/* form extras */
+dialog label.check { flex-direction: row; align-items: center; gap: 8px; color: var(--text); font-size: 14px; }
+dialog fieldset { border: 1px solid var(--border); border-radius: var(--radius); padding: 6px 10px 10px; margin: 0; }
+dialog legend { color: var(--muted); font-size: 12px; padding: 0 4px; }
+dialog .checks { display: flex; flex-direction: column; gap: 4px; max-height: 150px; overflow-y: auto; }
+dialog small { color: var(--muted); }
+dialog input[type="file"] { padding: 4px; }
+ul.report { margin: 0; padding-left: 18px; max-height: 50vh; overflow-y: auto; }
+a.btn { display: inline-block; padding: 4px 10px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--panel-2); color: var(--text); text-decoration: none; }
+a.btn:hover { border-color: var(--accent); }
+
+/* document preview drawer */
+#mdl-preview { position: fixed; top: 0; right: 0; bottom: 0; width: min(46vw, 760px); background: var(--panel); border-left: 1px solid var(--border); box-shadow: -8px 0 24px rgba(0, 0, 0, .5); display: none; flex-direction: column; z-index: 50; }
+#mdl-preview.open { display: flex; }
+#mdl-preview header { display: flex; align-items: center; gap: 10px; padding: 8px 12px; border-bottom: 1px solid var(--border); }
+#mdl-preview .pv-title { color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+#mdl-preview iframe { flex: 1; width: 100%; border: 0; background: #fff; }
+#mdl-preview .pv-msg { padding: 30px; color: var(--muted); text-align: center; }
+#mdl-preview .pv-note { padding: 6px 12px; font-size: 12px; color: var(--muted); border-top: 1px solid var(--border); }
+@media (max-width: 800px) { #mdl-preview { width: 100vw; } }
+
+/* readable documentation pages (help, FAQ) */
+main.doc { flex: 1; overflow-y: auto; padding: 24px 20px 60px; }
+main.doc > article { max-width: 860px; margin: 0 auto; }
+main.doc h1 { margin-top: 0; }
+main.doc h2 { margin-top: 32px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+main.doc p, main.doc li { color: #cfd6df; }
+main.doc code, main.doc kbd { font-family: var(--mono); background: var(--panel-2); border: 1px solid var(--border); border-radius: 4px; padding: 0 5px; }
+main.doc table { border-collapse: collapse; width: 100%; margin: 10px 0; }
+main.doc th, main.doc td { text-align: left; padding: 6px 10px; border: 1px solid var(--border); vertical-align: top; }
+main.doc th { background: var(--panel); position: static; color: var(--text); text-transform: none; font-size: 13px; letter-spacing: 0; }
+main.doc details { background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); padding: 8px 14px; margin: 8px 0; }
+main.doc summary { cursor: pointer; font-weight: 600; }
+main.doc details[open] summary { margin-bottom: 6px; }
