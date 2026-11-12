@@ -1,5 +1,0 @@
-[
-  {"id": "a1b2c3d401", "type": "plan", "ref": "PLN-001", "title": "Software Development Plan", "url": "https://example.com/plans/pln-001", "file": null, "author": "Ryan", "status": "Under Review", "notes": "Waiting on schedule baseline.", "tags": ["software", "milestone-1"], "created": "2026-11-05T09:00:00+00:00", "modified": "2026-11-05T09:00:00+00:00"},
-  {"id": "a1b2c3d402", "type": "specification", "ref": "SPC-014", "title": "Flight Control Interface Spec", "url": "", "file": null, "author": "Alex Rivera", "status": "In Work", "notes": "", "tags": ["software", "interfaces"], "created": "2026-11-05T09:05:00+00:00", "modified": "2026-11-05T09:05:00+00:00"},
-  {"id": "a1b2c3d403", "type": "procedure", "ref": "PRC-102", "title": "Configuration Management Procedure", "url": "https://example.com/procedures/prc-102", "file": null, "author": "Ryan", "status": "Released", "notes": "Approved.", "tags": ["milestone-1"], "created": "2026-11-05T09:10:00+00:00", "modified": "2026-11-05T09:10:00+00:00"}
-]

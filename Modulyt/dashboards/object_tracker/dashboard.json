@@ -1,6 +1,0 @@
-{
-  "title": "Object Tracker",
-  "description": "Track documents (or any objects) with links, attached copies, preview, status, notes, authors and tags.",
-  "collections": ["types", "objects"],
-  "files": true
-}
